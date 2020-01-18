@@ -3,8 +3,7 @@ on run {input, parameters}
 	if application "World of Warcraft" is running then
 		activate application "iCUE"
 		delay 2
-		tell application "iCUE" to activate
-		tell application "System Events" to set visible of process "iCUE" to false
+		tell application "System Events" to tell process "iCUE" to set visible to false
 		
 		tell application "System Preferences"
 			activate
