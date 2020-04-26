@@ -2,8 +2,13 @@ on run {input, parameters}
 	
 	if application "World of Warcraft" is running then
 		activate application "iCUE"
-		delay 2
+		activate application "RaiderIO"
+		activate application "TSMApplication"
+		
+		delay 1
 		tell application "System Events" to tell process "iCUE" to set visible to false
+		tell application "System Events" to tell process "RaiderIO" to set visible to false
+		tell application "System Events" to tell process "TSMApplication" to set visible to false
 		
 		tell application "System Preferences"
 			activate
@@ -43,6 +48,8 @@ on run {input, parameters}
 		
 	else
 		quit application "iCUE"
+		quit application "RaiderIO"
+		quit application "TSMApplication"
 		
 		tell application "System Preferences"
 			activate
